@@ -1,5 +1,6 @@
 package net.javaguides.springboot.service.impl;
 
+import java.util.Collection;
 import java.util.List;
 import java.util.Optional;
 
@@ -31,13 +32,6 @@ public class BookServiceImpl implements BookService{
 	}
 
 	@Override
-	public Book getBookById(long id) {
-		return bookRepository.findById(id).orElseThrow(() -> 
-						new ResourceNotFoundException("Book", "Id", id));
-		
-	}
-
-	@Override
 	public Book updateBook(Book book, long id) {
 		
 		// we need to check whether employee with given id is exist in DB or not
@@ -60,5 +54,19 @@ public class BookServiceImpl implements BookService{
 								new ResourceNotFoundException("Book", "Id", id));
 		bookRepository.deleteById(id);
 	}
+
+	@Override
+	public Book getBookById(long id) {
+		// TODO Auto-generated method stub
+		throw new UnsupportedOperationException("Unimplemented method 'getBookById'");
+	}
+
+	@Override
+	public Collection<Book> getBooks() {
+		// TODO Auto-generated method stub
+		throw new UnsupportedOperationException("Unimplemented method 'getBooks'");
+	}
+
+
 	
 }

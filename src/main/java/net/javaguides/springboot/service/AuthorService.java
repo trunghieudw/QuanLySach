@@ -6,7 +6,7 @@ import net.javaguides.springboot.model.*;
 
 public interface AuthorService {
 	Author saveAuthor(Author author);
-
+	
 	List<Author> getAllAuthors();
 
 	Author getAuthorById(long id);

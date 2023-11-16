@@ -4,6 +4,6 @@ import org.springframework.data.jpa.repository.JpaRepository;
 
 import net.javaguides.springboot.model.*;
 
-public interface UserRepository extends JpaRepository<User, Long>{
+public interface StudentRepository extends JpaRepository<Student, Long>{
 
 }

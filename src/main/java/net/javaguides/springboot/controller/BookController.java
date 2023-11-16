@@ -4,6 +4,7 @@ import java.util.List;
 
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
+import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.DeleteMapping;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
@@ -38,6 +39,11 @@ public class BookController {
 	public List<Book> getAllBooks(){
 		return bookService.getAllBooks();
 	}
+	@GetMapping("/viewBooks")
+    public String viewBooks(Model model) {
+        model.addAttribute("books", bookService.getAllBooks());
+        return "view-books";
+    }
 	
 	// build get Book by id REST API
 	// http://localhost:8080/api/Book/1
