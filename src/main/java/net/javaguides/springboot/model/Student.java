@@ -16,7 +16,7 @@ import lombok.Data;
 @Table(name="student")
 public class Student {
 	
-	 @Id
+	@Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private long id;
 
@@ -33,7 +33,7 @@ public class Student {
     private String email;
 
     @ManyToOne
-    @JoinColumn(name = "class_id")
+    @JoinColumn(name = "class_code")
     private Class studentClass;
 
 }

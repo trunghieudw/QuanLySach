@@ -21,7 +21,7 @@ public class Score {
     private Double score;
 
     @ManyToOne
-    @JoinColumn(name = "subject_id", nullable = false)
+    @JoinColumn(name = "subject_code", nullable = false)
     private Subject subject;
 
 
