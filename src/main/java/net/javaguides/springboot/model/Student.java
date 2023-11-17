@@ -18,7 +18,7 @@ public class Student {
 	
 	@Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private long id;
+    private Long id;
 
     @Column(name = "student_code", nullable = false, unique = true)
     private String studentCode;
@@ -33,7 +33,8 @@ public class Student {
     private String email;
 
     @ManyToOne
-    @JoinColumn(name = "class_code")
+    @JoinColumn(name = "class_code", nullable = false,referencedColumnName = "class_code")
     private Class studentClass;
+
 
 }

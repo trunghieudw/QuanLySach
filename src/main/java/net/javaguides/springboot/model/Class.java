@@ -15,13 +15,12 @@ import lombok.Data;
 public class Class {
 
 	@Id
-	@GeneratedValue(strategy = GenerationType.IDENTITY)
-	private long id;
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
+    private Long id;
 
-	@Column(name = "class_code", nullable = false, unique = true)
-	private String classCode;
+    @Column(name = "class_code", nullable = false, unique = true)
+    private String classCode;
 
-	@Column(name = "class_name", nullable = false)
-	private String className;
-
+    @Column(name = "class_name")
+    private String className;
 }

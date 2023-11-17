@@ -1,13 +1,11 @@
 package net.javaguides.springboot.service.impl;
 
-import java.util.Collection;
 import java.util.List;
-import java.util.Optional;
+
 
 import org.springframework.stereotype.Service;
 
 import net.javaguides.springboot.exception.ResourceNotFoundException;
-import net.javaguides.springboot.model.*;
 import net.javaguides.springboot.model.Class;
 import net.javaguides.springboot.repository.*;
 import net.javaguides.springboot.service.*;

@@ -13,16 +13,15 @@ public class Score {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private long id;
 
-    @ManyToOne
-    @JoinColumn(name = "student_id", nullable = false)
-    private Student student;
-
     @Column(name = "score_value", nullable = false)
     private Double score;
 
     @ManyToOne
-    @JoinColumn(name = "subject_code", nullable = false)
-    private Subject subject;
+    @JoinColumn(name = "student_code", nullable = false,referencedColumnName = "student_code")
+    private Student studentCode;
 
+    @ManyToOne
+    @JoinColumn(name = "subject_code", nullable = false,referencedColumnName = "subject_code")
+    private Subject subjectCode;
 
 }

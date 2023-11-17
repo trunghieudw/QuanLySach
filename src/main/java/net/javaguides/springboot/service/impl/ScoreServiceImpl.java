@@ -42,8 +42,8 @@ public class ScoreServiceImpl implements ScoreService {
                 () -> new ResourceNotFoundException("Score", "Id", id));
 
         existingScore.setScore(score.getScore());
-        existingScore.setStudent(score.getStudent());
-        existingScore.setSubject(score.getSubject());
+        existingScore.setStudentCode(score.getStudentCode());
+        existingScore.setSubjectCode(score.getSubjectCode());
 
         // Save the existing score to the database
         scoreRepository.save(existingScore);

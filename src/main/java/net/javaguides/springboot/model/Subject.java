@@ -24,5 +24,5 @@ public class Subject {
     @Column(name = "subject_name", nullable = false)
     private String subjectName;
 
-    // Other properties, getters, and setters
+    
 }
