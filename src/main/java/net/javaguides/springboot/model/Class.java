@@ -23,4 +23,31 @@ public class Class {
 
     @Column(name = "class_name")
     private String className;
+    
+     // Thêm phương thức getter và setter cho id
+     public Long getId() {
+        return id;
+    }
+
+    public void setId(Long id) {
+        this.id = id;
+    }
+
+    // Thêm phương thức getter và setter cho classCode
+    public String getClassCode() {
+        return classCode;
+    }
+
+    public void setClassCode(String classCode) {
+        this.classCode = classCode;
+    }
+
+    // Thêm phương thức getter và setter cho className
+    public String getClassName() {
+        return className;
+    }
+
+    public void setClassName(String className) {
+        this.className = className;
+    }
 }

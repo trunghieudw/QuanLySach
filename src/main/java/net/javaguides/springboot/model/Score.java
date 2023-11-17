@@ -16,12 +16,47 @@ public class Score {
     @Column(name = "score_value", nullable = false)
     private Double score;
 
-    @ManyToOne
-    @JoinColumn(name = "student_code", nullable = false,referencedColumnName = "student_code")
-    private Student studentCode;
+    
+    @Column(name = "student_code", nullable = false)
+    private String studentCode;
 
-    @ManyToOne
-    @JoinColumn(name = "subject_code", nullable = false,referencedColumnName = "subject_code")
-    private Subject subjectCode;
+  
+    @Column(name = "subject_code", nullable = false)
+    private String subjectCode;
 
+    // Thêm phương thức getter và setter cho id
+    public long getId() {
+        return id;
+    }
+
+    public void setId(long id) {
+        this.id = id;
+    }
+
+    // Thêm phương thức getter và setter cho score
+    public Double getScore() {
+        return score;
+    }
+
+    public void setScore(Double score) {
+        this.score = score;
+    }
+
+    // Thêm phương thức getter và setter cho studentCode
+    public String getStudentCode() {
+        return studentCode;
+    }
+
+    public void setStudentCode(String studentCode) {
+        this.studentCode = studentCode;
+    }
+
+    // Thêm phương thức getter và setter cho subjectCode
+    public String getSubjectCode() {
+        return subjectCode;
+    }
+
+    public void setSubjectCode(String subjectCode) {
+        this.subjectCode = subjectCode;
+    }
 }

@@ -24,5 +24,32 @@ public class Subject {
     @Column(name = "subject_name", nullable = false)
     private String subjectName;
 
-    
+    // Thêm phương thức getter và setter cho id
+    public long getId() {
+        return id;
+    }
+
+    public void setId(long id) {
+        this.id = id;
+    }
+
+    // Thêm phương thức getter và setter cho subjectCode
+    public String getSubjectCode() {
+        return subjectCode;
+    }
+
+    public void setSubjectCode(String subjectCode) {
+        this.subjectCode = subjectCode;
+    }
+
+    // Thêm phương thức getter và setter cho subjectName
+    public String getSubjectName() {
+        return subjectName;
+    }
+
+    public void setSubjectName(String subjectName) {
+        this.subjectName = subjectName;
+    }
 }
+
+    
